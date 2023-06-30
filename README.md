@@ -8,21 +8,30 @@ npx serve@latest dist
 
 ## Converting to IOS/Android apps
 
+
 Install the Capacitor CLI locally:
+
 npm install -D @capacitor/cli
 
 Add the native platforms:
+
 npx cap add ios
 npx cap add android
+
 
 Build local project and sync:
 
 npm run build
+
 npx cap sync
 
+
 Open xcode or android studio:
+
 npx cap open ios
+
 npx cap open android
+
 
 # Hosting
 
