@@ -35,7 +35,7 @@ export default class CustomDocument extends Document {
 
     render() {
         return (
-            <Html lang="en">
+            <Html lang="en" translate="no">
                 <Head>
                     <meta charSet="UTF-8" />
                     <meta content="ie=edge" httpEquiv="X-UA-Compatible" />
