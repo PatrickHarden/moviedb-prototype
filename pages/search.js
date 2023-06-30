@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import styles from '../styles/Home.module.css'
 import { searchMovies } from '../api/api'
-import { SimpleGrid, Tooltip } from '@chakra-ui/react'
+import { SimpleGrid, Tooltip, Fade } from '@chakra-ui/react'
 import Link from 'next/link'
 import MovieCard from '../components/movieCard'
 
@@ -23,9 +23,9 @@ export default function Search({ searchTerm }) {
                 {movies.map(({ id, poster_path, original_title }, index) => (
                     <Link href={'/search/' + id} key={String(id) + index}>
                         <Tooltip label={original_title} openDelay={1000}>
-                            <div>
-                                <MovieCard id={id} poster_path={poster_path} original_title={original_title} />
-                            </div>
+                            <Fade>
+                                <MovieCard poster_path={poster_path} original_title={original_title} />
+                            </Fade>
                         </Tooltip>
                     </Link>
                 ))}

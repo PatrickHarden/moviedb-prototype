@@ -1,7 +1,7 @@
 import { Card, CardBody, CardHeader, Image, Heading } from "@chakra-ui/react"
 import styles from '../styles/Home.module.css'
 
-export default function MovieCard({ id, poster_path, original_title }) {
+export default function MovieCard({ poster_path, original_title }) {
     return (
         <Card maxW="sm" padding={0} height='100%' justifyContent='center'>
             {poster_path ?

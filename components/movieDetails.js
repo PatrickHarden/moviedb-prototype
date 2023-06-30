@@ -28,7 +28,7 @@ export default function MovieDetails({ movie }) {
                             <br />
                         </>
                     }
-                    <Text>Genres: {movie.genres.map((genre) => (<span style={{ marginRight: '5px' }}>{genre.name}</span>))}</Text>
+                    <Text>Genres: {movie.genres.map((genre, i) => (<span key={`${genre.name}${i}`} style={{ marginRight: '5px' }}>{genre.name}</span>))}</Text>
                     <Text>Release Date: {movie.release_date}</Text>
                     <Text>Runtime: {movie.runtime}min</Text>
                     <Text>Budget: ${movie.budget}</Text>
