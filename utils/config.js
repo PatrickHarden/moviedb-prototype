@@ -8,5 +8,5 @@ export default {
     API_TOP_RATED: 'https://api.themoviedb.org/3/movie/top_rated?api_key=848268110adb03febf792902eac10bc7&region=US&language=en-US',
     API_SEARCH: 'https://api.themoviedb.org/3/search/movie?api_key=848268110adb03febf792902eac10bc7&include_adult=false&page=1&query=',
     API_POPULAR_MOVIES: 'https://api.themoviedb.org/3/movie/popular?api_key=848268110adb03febf792902eac10bc7&include_adult=false',
-    PAGE_LOOP_AMOUNT: 3
+    PAGE_LOOP_AMOUNT: 100
   }
