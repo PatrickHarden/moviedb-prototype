@@ -12,7 +12,7 @@ export default function NowPlaying({ movies }) {
                 {movies.map(({ id, poster_path, original_title }, index) => (
                     <Link href={'/movie/' + id} key={String(id) + index}>
                         <Tooltip label={original_title} openDelay={1000}>
-                            <div>
+                            <div style={{ height: '100%' }}>
                                 <MovieCard poster_path={poster_path} original_title={original_title} />
                             </div>
                         </Tooltip>
