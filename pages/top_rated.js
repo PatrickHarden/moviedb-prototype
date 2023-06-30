@@ -1,5 +1,5 @@
 import styles from '../styles/Home.module.css'
-import { SimpleGrid, Tooltip, Fade } from '@chakra-ui/react'
+import { SimpleGrid, Tooltip } from '@chakra-ui/react'
 import Link from 'next/link'
 import { fetchMovies } from '../api/api'
 import config from '../utils/config'
@@ -12,9 +12,9 @@ export default function TopRated({ movies }) {
                 {movies.map(({ id, poster_path, original_title }, index) => (
                     <Link href={'/movie/' + id} key={String(id) + index}>
                         <Tooltip label={original_title} openDelay={1000}>
-                            <Fade in>
+                            <div>
                                 <MovieCard poster_path={poster_path} original_title={original_title} />
-                            </Fade>
+                            </div>
                         </Tooltip>
                     </Link>
                 ))}
